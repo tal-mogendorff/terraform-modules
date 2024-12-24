@@ -58,6 +58,7 @@ resource "null_resource" "jenkins_token_name" {
 # Configure the source for Jenkins jobs proxy
 resource "kubiya_source" "jenkins_proxy" {
   url  = "https://github.com/kubiyabot/community-tools/tree/jenkins-operations/jenkins_ops"
+  runner = var.kubiya_runner
   
   dynamic_config = jsonencode({
   jenkins_url = var.jenkins_url
@@ -76,7 +77,6 @@ resource "kubiya_source" "jenkins_proxy" {
     stream_logs              = tostring(var.stream_logs)
   }
 })
-  runner = var.kubiya_runner
   depends_on = [null_resource.jenkins_token_name]
 }
 
