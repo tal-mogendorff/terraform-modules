@@ -18,7 +18,7 @@ variable "jenkins_username" {
 variable "jenkins_token_name" {
   description = "🗝️ Name of the Kubiya secret to store the Jenkins token"
   type        = string
-  default     = "jenkins-api-token"
+  default     = "JENKINS_API_TOKEN"
 }
 
 variable "jenkins_token_secret" {
