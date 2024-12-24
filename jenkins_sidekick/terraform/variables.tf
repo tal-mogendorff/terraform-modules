@@ -81,7 +81,7 @@ variable "long_running_threshold" {
 variable "name" {
   description = "🏷️ Name for your Jenkins conversational proxy"
   type        = string
-  default     = "jenkins-proxy"
+  default     = "jenkins-proxy-teammate"
 }
 
 variable "kubiya_runner" {
