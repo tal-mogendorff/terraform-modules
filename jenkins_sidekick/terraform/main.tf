@@ -98,8 +98,8 @@ resource "kubiya_agent" "jenkins_proxy" {
 output "jenkins_proxy_details" {
   value = {
     name         = kubiya_agent.jenkins_proxy.name
-    runner       = kubiya_agent.jenkins_proxy.runner
-    integrations = kubiya_agent.jenkins_proxy.integrations
+    runner       = var.kubiya_runner
+    integrations = var.kubiya_integrations
     jenkins_url  = var.jenkins_url
   }
   description = "Details about the deployed Jenkins conversational proxy"
