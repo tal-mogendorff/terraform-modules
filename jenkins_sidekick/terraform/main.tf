@@ -57,7 +57,6 @@ resource "null_resource" "jenkins_token_name" {
 
 # Configure the source for Jenkins jobs proxy
 resource "kubiya_source" "jenkins_proxy" {
-  name = "jenkins-proxy"
   url  = "https://github.com/kubiyabot/community-tools/tree/jenkins-operations/jenkins_ops"
   
   dynamic_config = jsonencode({
